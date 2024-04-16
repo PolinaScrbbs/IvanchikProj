@@ -1,0 +1,270 @@
+[
+    {
+    "model": "Auth.user",
+    "pk": 1,
+    "fields": {
+        "last_login": null,
+        "is_superuser": true,
+        "email": "I@gmail.com",
+        "password": "pbkdf2_sha256$600000$VqnIb1Hy89RK8DiUoscJS0$6q8pZTh2P8V3NgTbecVIh7reVG44n0byhw/xUDI3k0U=",
+        "full_name": "Иванченков Даниил",
+        "is_active": true,
+        "is_staff": true,
+        "groups": [],
+        "user_permissions": []
+    }
+    },
+
+    {
+        "model": "Library.author",
+        "pk": 1,
+        "fields": {
+            "full_name": "Джоан Роулинг"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 2,
+        "fields": {
+            "full_name": "Лев Толстой"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 3,
+        "fields": {
+            "full_name": "Джордж Оруэлл"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 4,
+        "fields": {
+            "full_name": "Джон Рональд Руэл Толкин"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 5,
+        "fields": {
+            "full_name": "Оскар Уайльд"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 6,
+        "fields": {
+            "full_name": "Михаил Булгаков"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 7,
+        "fields": {
+            "full_name": "Харпер Ли"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 8,
+        "fields": {
+            "full_name": "Рэй Брэдбери"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 9,
+        "fields": {
+            "full_name": "Антуан де Сент-Экзюпери"
+        }
+    },
+    {
+        "model": "Library.author",
+        "pk": 10,
+        "fields": {
+            "full_name": "Лев Толстой"
+        }
+    },
+
+    {
+        "model": "Library.genre",
+        "pk": 1,
+        "fields": {
+            "name": "Фэнтези"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 2,
+        "fields": {
+            "name": "Роман"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 3,
+        "fields": {
+            "name": "Научная фантастика"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 4,
+        "fields": {
+            "name": "Приключения"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 5,
+        "fields": {
+            "name": "Детектив"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 6,
+        "fields": {
+            "name": "Сатира"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 7,
+        "fields": {
+            "name": "Драма"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 8,
+        "fields": {
+            "name": "Философия"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 9,
+        "fields": {
+            "name": "Поэма"
+        }
+    },
+    {
+        "model": "Library.genre",
+        "pk": 10,
+        "fields": {
+            "name": "Фантастика"
+        }
+    },
+
+    {
+        "model": "Library.book",
+        "pk": 1,
+        "fields": {
+            "title": "Гарри Поттер и Философский камень",
+            "author": 1,
+            "genre": 1,
+            "cover_image": "covers/harry_potter.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 2,
+        "fields": {
+            "title": "Война и мир",
+            "author": 2,
+            "genre": 2,
+            "cover_image": "covers/war_and_peace.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 3,
+        "fields": {
+            "title": "1984",
+            "author": 3,
+            "genre": 3,
+            "cover_image": "covers/1984.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 4,
+        "fields": {
+            "title": "Властелин колец: Братство кольца",
+            "author": 4,
+            "genre": 4,
+            "cover_image": "covers/lotr_fellowship.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 5,
+        "fields": {
+            "title": "Портрет Дориана Грея",
+            "author": 5,
+            "genre": 5,
+            "cover_image": "covers/dorian_gray.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 6,
+        "fields": {
+            "title": "Мастер и Маргарита",
+            "author": 6,
+            "genre": 6,
+            "cover_image": "covers/master_and_margarita.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 7,
+        "fields": {
+            "title": "Убить пересмешника",
+            "author": 7,
+            "genre": 7,
+            "cover_image": "covers/to_kill_a_mockingbird.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 8,
+        "fields": {
+            "title": "Вино из одуванчиков",
+            "author": 8,
+            "genre": 8,
+            "cover_image": "covers/dandelion_wine.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 9,
+        "fields": {
+            "title": "Маленький принц",
+            "author": 9,
+            "genre": 9,
+            "cover_image": "covers/little_prince.jpg",
+            "publication_date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Library.book",
+        "pk": 10,
+        "fields": {
+            "title": "Анна Каренина",
+            "author": 10,
+            "genre": 10,
+            "cover_image": "covers/anna_karenina.jpg",
+            "publication_date": "2022-01-01"
+        }
+    }
+]
