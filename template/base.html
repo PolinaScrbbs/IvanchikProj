@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css\style.css' %}" rel="stylesheet">
+    <title> {{title}} </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">Библиотека</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    {% if not user.full_name %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}?next={{ request.path }}">Войти</a>
+                        </li>
+                    {% else %}
+                        {% if user.full_name %}
+                            <a class="nav-item" href="{% url "borrows" %}" style="text-decoration: none;">
+                                <span class="nav-link">Брони</span>
+                            </a>
+                        {% endif %}
+                        <li class="nav-item">
+                            <span class="nav-link"">{{user.full_name}}</span>
+                        </li>
+                        <a class="nav-item" href="{% url "logout" %}" style="text-decoration: none;">
+                            <span class="nav-link">Выйти</span>
+                        </a>                      
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+            &copy; 2024 IvanchikProj
+        </div>
+    </footer>
+
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+{% block scripts %} 
+
+{% endblock scripts %}
+</body>
+</html>

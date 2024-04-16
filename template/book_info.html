@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container mt-3">
+        <h1 class="text-center mb-4">{{ book.title }}</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ book.cover_image }}" alt="{{ book.title }}" class="img-fluid mb-3">
+                        <p><strong>Автор:</strong> {{ book.author.full_name }}</p>
+                        <p><strong>Жанр:</strong> {{ book.genre.name }}</p>
+                        {% if book.summary %}
+                        <p><strong>Описание:</strong> {{ book.summary }}</p>
+                        {% endif %}
+                        
+                        {% if borrow %}
+                            <p class="text-success">Книга забронирована {{borrow.borrowed_date}}</p>
+                        {% else %}
+                            <a href="{% url 'borrow_book' book.id %}" class="btn btn-dark">Забронировать</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
